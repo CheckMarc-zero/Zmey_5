@@ -1,0 +1,7 @@
+f = open('need_text.txt', 'w')
+f.write(input("Введите исходный текст: "))
+f.close()
+f = open('need_text.txt', 'r')
+data = (f.read()).split()
+res_text = list(filter(lambda x: 'а' not in x and 'б' not in x and 'в' not in x, data))
+print(res_text)
